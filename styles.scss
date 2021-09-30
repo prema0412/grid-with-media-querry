@@ -1,0 +1,106 @@
+nav {
+    ul 
+    {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        background-color: black;
+
+        li {
+            list-style-type: none;
+            border: 2px solid black;
+
+            .logo
+            {
+              background-color: darkmagenta;
+             }
+         }
+
+         a {
+             color: white;
+             font-size: larger;
+             text-decoration: none ;
+
+           
+         }
+
+        
+
+    
+    }
+
+}
+
+main {
+
+.grid-container 
+{
+    display: grid;
+    grid-gap: 10px;
+    background-color: white;
+    border: 2px solid darkmagenta ; 
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'pic'
+    'me me me' 
+    'hob hob hob'
+    'cont cont cont'
+    'emp emp emp'
+    'edu edu edu'; 
+
+    .pic {
+        grid-area: pic;
+        border-radius: 50%;
+        padding: 20px; 
+        width: 50px;
+        height: 50px; 
+        object-fit: contain;
+    };
+
+    .me {
+        grid-area: me;
+        border: 2px solid darkmagenta;
+        padding: 10px;
+        font-size: 30px;
+        color: white;
+        background-color: darkmagenta;
+    };
+    .hob {
+        grid-area: hob;
+        border: 2px solid darkmagenta;
+        padding: 10px;
+        font-size: 30px;
+        color: white;
+        background-color: darkmagenta;
+    };
+    .cont {
+        grid-area: cont;
+        border: 2px solid darkmagenta;
+        padding: 10px;
+        font-size: 30px;
+        color: white;
+        background-color: darkmagenta;
+    };
+    .emp {
+        grid-area: emp;
+        border: 2px solid darkmagenta;
+        padding: 10px;
+        font-size: 30px;
+        color: white;
+        background-color: darkmagenta;
+    };
+    .edu {
+        grid-area: edu;
+        border: 2px solid darkmagenta;
+        padding: 10px;
+        font-size: 30px;
+        color: white;
+        background-color: darkmagenta;
+    };
+    
+    
+    
+}
+}
+

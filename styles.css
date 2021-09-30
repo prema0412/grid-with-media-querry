@@ -1,0 +1,76 @@
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: black;
+}
+nav ul li {
+  list-style-type: none;
+  border: 2px solid black;
+}
+nav ul li .logo {
+  background-color: darkmagenta;
+}
+nav ul a {
+  color: white;
+  font-size: larger;
+  text-decoration: none;
+}
+
+main .grid-container {
+  display: grid;
+  grid-gap: 10px;
+  background-color: white;
+  border: 2px solid darkmagenta;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "pic" "me me me" "hob hob hob" "cont cont cont" "emp emp emp" "edu edu edu";
+}
+main .grid-container .pic {
+  grid-area: pic;
+  border-radius: 50%;
+  padding: 20px;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+main .grid-container .me {
+  grid-area: me;
+  border: 2px solid darkmagenta;
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+  background-color: darkmagenta;
+}
+main .grid-container .hob {
+  grid-area: hob;
+  border: 2px solid darkmagenta;
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+  background-color: darkmagenta;
+}
+main .grid-container .cont {
+  grid-area: cont;
+  border: 2px solid darkmagenta;
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+  background-color: darkmagenta;
+}
+main .grid-container .emp {
+  grid-area: emp;
+  border: 2px solid darkmagenta;
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+  background-color: darkmagenta;
+}
+main .grid-container .edu {
+  grid-area: edu;
+  border: 2px solid darkmagenta;
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+  background-color: darkmagenta;
+}
