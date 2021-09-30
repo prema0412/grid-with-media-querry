@@ -6,6 +6,13 @@ nav {
         padding: 10px;
         background-color: black;
 
+        a {
+            color: white;
+            font-size: larger;
+            text-decoration: none ;
+
+        }
+
         li {
             list-style-type: none;
             border: 2px solid black;
@@ -16,18 +23,10 @@ nav {
              }
          }
 
-         a {
-             color: white;
-             font-size: larger;
-             text-decoration: none ;
-
-           
-         }
-
         
-
     
     }
+    display: none;
 
 }
 
@@ -36,71 +35,105 @@ main {
 .grid-container 
 {
     display: grid;
+    // width: 50%;
+    // height: 50%;
     grid-gap: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: white;
     border: 2px solid darkmagenta ; 
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 25%;
+    margin-right: 25%;
+    grid-template-columns: 2fr;
+    grid-template-rows: 2fr 0.5fr 0.5fr 0.5fr 1.5fr 1fr;
     grid-template-areas: 
-    'pic'
-    'me me me' 
-    'hob hob hob'
-    'cont cont cont'
-    'emp emp emp'
-    'edu edu edu'; 
+    "pic"
+    "me" 
+    "hob"
+    "cont"
+    "emp"
+    "edu"; 
 
     .pic {
         grid-area: pic;
         border-radius: 50%;
-        padding: 20px; 
-        width: 50px;
-        height: 50px; 
+        margin-top: 20px; 
+        margin-left: 220px;
+        margin-bottom: 20px;
+        width: 250px;
+        height: 250px; 
+        position: relative;
+        overflow: hidden;
         object-fit: contain;
-    };
+    }
+
+    .profile-pic {
+        display: inline;
+        margin-left: -25%; //centers the image
+        height: 100%;
+        width: auto;
+      }
 
     .me {
         grid-area: me;
         border: 2px solid darkmagenta;
-        padding: 10px;
-        font-size: 30px;
+        font-size: 20px;
         color: white;
         background-color: darkmagenta;
-    };
+    }
     .hob {
         grid-area: hob;
         border: 2px solid darkmagenta;
-        padding: 10px;
-        font-size: 30px;
+        font-size: 20px;
         color: white;
         background-color: darkmagenta;
-    };
+    }
     .cont {
         grid-area: cont;
         border: 2px solid darkmagenta;
-        padding: 10px;
-        font-size: 30px;
+        font-size: 20px;
         color: white;
         background-color: darkmagenta;
-    };
+    }
     .emp {
         grid-area: emp;
         border: 2px solid darkmagenta;
-        padding: 10px;
-        font-size: 30px;
+        font-size: 20px;
         color: white;
         background-color: darkmagenta;
-    };
+    }
     .edu {
         grid-area: edu;
         border: 2px solid darkmagenta;
-        padding: 10px;
-        font-size: 30px;
+        font-size: 20px;
         color: white;
         background-color: darkmagenta;
-    };
+    }
     
     
     
 }
+   
+
+   
 }
+
+@media only screen and (min-width: 600px)
+{
+ .grid-container 
+ {
+    width: auto;
+    height: auto; 
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1.5fr 1fr; 
+    grid-template-areas: 
+    "pic me me" 
+    "pic hob hob" 
+    "pic cont cont" 
+    "emp emp emp" 
+    "edu edu edu";
+ }
+}
+
+
+
 

@@ -1,6 +1,3 @@
-nav {
-  display: none;
-}
 nav ul {
   display: flex;
   justify-content: space-around;
@@ -22,24 +19,20 @@ nav ul li .logo {
 
 main .grid-container {
   display: grid;
+  width: 50%;
   grid-gap: 10px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-color: white;
   border: 2px solid darkmagenta;
-  margin-left: 25%;
-  margin-right: 25%;
-  grid-template-columns: 2fr;
-  grid-template-rows: 2fr 0.5fr 0.5fr 0.5fr 1.5fr 1fr;
   grid-template-areas: "pic" "me" "hob" "cont" "emp" "edu";
 }
 main .grid-container .pic {
   grid-area: pic;
   border-radius: 50%;
   margin-top: 20px;
-  margin-left: 220px;
+  margin-left: 70px;
   margin-bottom: 20px;
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   position: relative;
   overflow: hidden;
   object-fit: contain;
@@ -86,12 +79,14 @@ main .grid-container .edu {
   background-color: darkmagenta;
 }
 
-@media only screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .grid-container {
-    width: auto;
-    height: auto;
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr 1.5fr 1fr;
+    width: 100%;
     grid-template-areas: "pic me me" "pic hob hob" "pic cont cont" "emp emp emp" "edu edu edu";
+  }
+}
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-areas: "pic" "me" "hob" "cont" "emp" "edu";
   }
 }
